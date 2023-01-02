@@ -79,8 +79,8 @@ class MyApp extends StatelessWidget {
                     autoPlay: true,
                     autoPlayInterval: const Duration(seconds: 3)),
                 items: [
-                  Image.asset("assets/images/i1.jpg"),
-                  Image.asset("assets/images/i2.jpg")
+                  Image.asset("assets/images/1.jpg"),
+                  Image.asset("assets/images/2.jpg")
                 ],
               ),
             ),
