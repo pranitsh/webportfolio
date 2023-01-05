@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -5,6 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:webportfolio/portfolio.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 import 'package:go_router/go_router.dart';
+import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
 
 final GoRouter _router = GoRouter(
   routes: <RouteBase>[
@@ -30,6 +33,7 @@ final Uri _url1 = Uri.parse(
 
 final Uri _url2 = Uri.parse("https://github.com/pshah2023");
 
+// ignore: unused_element
 final Uri _url3 = Uri.parse("https://www.patreon.com/user/creators?u=54892812");
 
 final Uri _url4 = Uri.parse(
@@ -177,12 +181,6 @@ class _MyAppState extends State<MyApp> {
     }
   }
 
-  Future<void> _launchUrl3() async {
-    if (!await launchUrl(_url3)) {
-      throw 'Could not launch $_url3';
-    }
-  }
-
   Future<void> _launchUrl4() async {
     if (!await launchUrl(_url4)) {
       throw 'Could not launch $_url4';
@@ -200,14 +198,6 @@ class _MyAppState extends State<MyApp> {
       appBar: AppBar(
         title: const Text("Pranit Shah"),
         actions: [
-          Tooltip(
-            waitDuration: const Duration(milliseconds: 400),
-            message: "Press to open my patreon. I'd love any help.",
-            child: PlatformIconButton(
-              icon: const Icon(Icons.favorite),
-              onPressed: _launchUrl3,
-            ),
-          ),
           Tooltip(
             waitDuration: const Duration(milliseconds: 400),
             message: "Press to get my github.",
@@ -284,19 +274,23 @@ class _MyAppState extends State<MyApp> {
               ],
             ),
           ),
-          Expanded(
-            flex: 1,
-            child: ElevatedButton(
-              onPressed: _launchUrl4,
-              child: const Text('Check them all out!'),
-            ),
-          ),
           const Expanded(
             flex: 1,
             child: Center(
               child: Text(
-                "I'll be adding more as soon as I can.",
+                "A carousel of my works of art. I am a self taught artist.\nSee more by clicking the buttons below and on the top bar.",
                 style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: PlatformElevatedButton(
+                alignment: Alignment.center,
+                onPressed: _launchUrl4,
+                child: const Text('See more of the art I created!'),
               ),
             ),
           ),
