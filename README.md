@@ -7,3 +7,4 @@ Here are some of the links I made use of to show my portfolio:
 3. [Patreon](https://www.patreon.com/user/creators?u=54892812)
 4. [Web Portfolio](https://www.youtube.com/playlist?list=PLHQgwEtnHIWdoYsKcwgUxXG0xjuNBDINo)
 5. [Music Portfolio](https://youtube.com/playlist?list=PLHQgwEtnHIWc--_kL1RtBmKze5jSFme1j)
+  1. [Highlight](https://youtu.be/O5-SEijLOG8?t=34)
